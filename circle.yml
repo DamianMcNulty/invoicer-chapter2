@@ -49,4 +49,4 @@ deployment:
       - >
         docker images --no-trunc | awk '/^app/ {print $3}' |
         tee $CIRCLE_ARTIFACTS/docker-image-shasum256.txt
-      - docker push ${DOCKER_REPO}/${CIRCLE_PROJECT_REPONAME}
+      - docker push ${DOCKER_USER}/${CIRCLE_PROJECT_REPONAME}
